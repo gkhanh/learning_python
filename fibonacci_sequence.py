@@ -6,12 +6,10 @@ def fibonacci_sequence(i):
     for j in range(2, i):
         z[j] = z[j - 2] + z[j - 1]
         z.append(z[j] + z[j - 1])
-    print(z)
-
+    return z
 
 def main():
-    print(fibonacci_sequence(20))
-
+    print(fibonacci_sequence(9))
 
 if __name__ == "__main__":
     main()
