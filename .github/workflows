@@ -11,8 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install py
-        run: sudo apt-get install python-pip 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3' 
 
-      - name: run basic_functions
-        run: py basic_functions.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Assuming you have a requirements.txt file with dependencies
+
+      - name: Run basic_functions
+        run: python basic_functions.py
