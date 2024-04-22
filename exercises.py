@@ -7,28 +7,29 @@ def char_count_1(text):
         counting = text.count(c)
         frequency.append(counting)
     letter_list = list(this_set)
-    print(letter_list)
+    # print(letter_list)
     for i in range(0, len(letter_list)):
         print(f'{letter_list[i]} - {frequency[i]}')
-    print(letter_list)
-    print(frequency)
+    # print(letter_list)
+    # print(frequency)
 
 
-def char_count_2(text):
-    my_dict = {}  # initialize hashmap
-    for c in text:
-        counting = text.count(c)
-        my_dict.update({f"{c}": counting})
-    print(my_dict)
+# def char_count_2(text):
+#     my_dict = {}  # initialize hashmap
+#     for c in text:
+#         counting = text.count(c)
+#         my_dict.update({f"{c}": counting})
+#     # print(my_dict)
+#     return my_dict
 
 
 def main():
-    print(char_count_1("appearance"))
-    print(char_count_2("appearance"))
-#
-#
-# if __name__ == "__main__":
-#     main()
+    char_count_1("appearance")
+    # print(char_count_2("appearance"))
+
+
+if __name__ == "__main__":
+    main()
 #
 #
 # def solve_1(startX, startY, destX, destY):
@@ -105,3 +106,40 @@ def main():
 #
 # if __name__ == "__main__":
 #     main()
+
+
+# import numpy
+#
+# n = int(input())
+# a = []
+# b = []
+# for i in range(n):
+#     a.append(list(map(int, input().split())))
+# for i in range(n):
+#     b.append(list(map(int, input().split())))
+# a = numpy.array(a)
+# b = numpy.array(b)
+#
+# print(numpy.dot(a, b))
+
+# thickness = int(input())  # This must be an odd number
+# c = 'H'
+#
+# # Top Cone
+# for i in range(thickness):
+#     print((c * i).rjust(thickness - 1) + c + (c * i).ljust(thickness - 1))
+#
+# # Top Pillars
+# for i in range(thickness + 1):
+#     print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))
+#
+# # Middle Belt
+# for i in range((thickness + 1) // 2):
+#     print((c * thickness * 5).center(thickness * 6))
+#
+# # Bottom Pillars
+# for i in range(thickness + 1):
+#     print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))
+#
+# # Bottom Cone for i in range(thickness): print(((c * (thickness - i - 1)).rjust(thickness) + c + (c * (thickness -
+# i - 1)).ljust(thickness)).rjust(thickness * 6))
