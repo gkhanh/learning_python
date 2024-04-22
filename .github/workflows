@@ -40,3 +40,4 @@ jobs:
   if: alway()
   need:
     - build
+    - run
