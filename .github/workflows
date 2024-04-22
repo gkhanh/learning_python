@@ -23,3 +23,8 @@ jobs:
 
       - name: Run basic_functions
         run: python basic_functions.py
+ pass_all_required-check:
+  name: Pass all
+  if: alway()
+  need:
+    - build
